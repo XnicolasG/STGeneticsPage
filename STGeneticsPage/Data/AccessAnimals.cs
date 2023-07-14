@@ -35,7 +35,7 @@ namespace STGeneticsPage.Data
 
         public async Task<bool> SaveAnimal(Animals animals) //this is created to delegate the service to choose when it's an update abd when is a an insert(load)
         {
-            if (animals.AnimalId.Length > 0)  
+            if (animals.AnimalId.Length >0)  
             {
                 return await UpdateAnimal(animals);
             }
