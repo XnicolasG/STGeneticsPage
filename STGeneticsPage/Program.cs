@@ -1,13 +1,15 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using STGeneticsPage.Data;
+using STGeneticsPage.DBModel;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddDbContext<AnimalContext>(); //adding dbContext to my hole app
+builder.Services.AddScoped<CRUDAnimals, AccessAnimals>();
 
 var app = builder.Build();
 
