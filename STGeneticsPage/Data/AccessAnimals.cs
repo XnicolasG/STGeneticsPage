@@ -29,19 +29,24 @@ namespace STGeneticsPage.Data
 
         public async Task<bool> LoadAnimal(Animals animals)
         {
-            _context.AnimalsT.Add(animals); 
+            _context.AnimalsT.Add(animals);
+            animals.AnimalId = Guid.NewGuid().ToString();
             return await _context.SaveChangesAsync() > 0; //needs to be greater than 0 to be true (Successful)
         }
 
         public async Task<bool> SaveAnimal(Animals animals) //this is created to delegate the service to choose when it's an update abd when is a an insert(load)
         {
-            if (animals.AnimalId.Length >0)  
+            if (animals.AnimalId == null)
             {
-                return await UpdateAnimal(animals);
+                throw new Exception("value of AnimalId cannot be null");
+            }
+            if (animals.AnimalId.Length == 0) //error
+            {
+                return await LoadAnimal(animals);
             }
             else
             {
-                return await LoadAnimal(animals);
+                return await UpdateAnimal(animals);
             }
         }
 

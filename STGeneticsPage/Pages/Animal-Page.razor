@@ -1,34 +1,39 @@
-﻿@page "/counter"
+﻿@page "/AnimalPage"
 @using STGeneticsPage.DBModel;
 @using STGeneticsPage.Data;
 @inject CRUDAnimals AccessAnimals
 
 <PageTitle>Animal Page</PageTitle>
-
+<h1>Hola</h1>
 <EditForm Model="@animal">
     <div>
         <label for="AnimalName">Name</label>
-        <InputText id="AnimalName" @bind-Value="animal.Name"></InputText>
+        <input type="text" id="AnimalName" @bind="animal.Name" required></input>
     </div>
     <div>
         <label for="AnimalBreed">Breed</label>
-        <InputText id="AnimalBreed" @bind-Value="animal.Breed"></InputText>
+        <input type="text" id="AnimalBreed" @bind="animal.Breed" required></input>
     </div>
     <div>
         <label for="AnimalBirth">Day of Birth</label>
-        <InputDate id="AnimalBirth" @bind-Value="animal.DateOfBirth"></InputDate>
+        <input type="date" id="AnimalBirth" @bind="animal.DateOfBirth" min="2009-1-1" required></input>
     </div>
     <div>
         <label for="AnimalSex">Sex</label>
-        <InputText id="AnimalSex" @bind-Value="animal.Sex"></InputText>
+        <input type="" id="AnimalSex" @bind="animal.Sex" required></input>
     </div>
     <div>
         <label for="AnimalPrice">Price</label>
-        <InputNumber id="AnimalPrice" @bind-Value="animal.Price"></InputNumber>
+        <input type="number" id="AnimalPrice" @bind="animal.Price" required></input>
     </div>
     <div>
         <label for="AnimalStatus">Status</label>
-        <InputText id="AnimalStatus" @bind-Value="animal.Status"></InputText>
+        <input type="text" list="Status" id="AnimalStatus" @bind="animal.Status" required>
+        <datalist id="Status">
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+        </datalist>
+        </input>
     </div>
     <section>
         <button>Filter</button>

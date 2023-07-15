@@ -86,3 +86,5 @@ C:\Users\nicol\OneDrive\Documentos\N\STG\STGeneticsPage\STGeneticsPage\obj\Debug
 C:\Users\nicol\OneDrive\Documentos\N\STG\STGeneticsPage\STGeneticsPage\obj\Debug\net6.0\STGeneticsPage.pdb
 C:\Users\nicol\OneDrive\Documentos\N\STG\STGeneticsPage\STGeneticsPage\obj\Debug\net6.0\STGeneticsPage.genruntimeconfig.cache
 C:\Users\nicol\OneDrive\Documentos\N\STG\STGeneticsPage\STGeneticsPage\obj\Debug\net6.0\ref\STGeneticsPage.dll
+C:\Users\nicol\OneDrive\Documentos\N\STG\STGeneticsPage\STGeneticsPage\obj\Debug\net6.0\STGeneticsPage.Properties.Resources.resources
+C:\Users\nicol\OneDrive\Documentos\N\STG\STGeneticsPage\STGeneticsPage\obj\Debug\net6.0\STGeneticsPage.csproj.GenerateResource.cache

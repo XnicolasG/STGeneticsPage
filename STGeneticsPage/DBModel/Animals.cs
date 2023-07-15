@@ -6,12 +6,18 @@ namespace STGeneticsPage.DBModel
     {
         [Key]
         public string AnimalId { get; set; }
-        public string? Name { get; set; }
-        public string? Breed { get; set; }
+        [Required]
+        public string Name { get; set; }
+        [Required]
+        public string Breed { get; set; }
+        [Required]
         public DateTime DateOfBirth { get; set; }
-        public string? Sex { get; set; }
+        [Required]
+        public string Sex { get; set; }
+        [Required]
         public int Price { get; set; }
-        public string? Status { get; set; }
+        [Required]
+        public string Status { get; set; }
 
     }
 }
